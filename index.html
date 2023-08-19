@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>85-Summer-Sale</title>
-</head>
-<body>
-    <h1>85-summerr-sale</h1>
-</body>
+    <!-- tailwind and daisy UI link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-WorkSans {
+        font-family: "Work Sans", sans-serif;
+      }
+    </style>
+    <!-- font awesome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  
+  <body class="font-WorkSans">
+    <header>
+      <!-- banner section -->
+      <section class="h-[700px] bg-[#F9F6E2]">
+        <!-- div--container -->
+        <div class="flex flex-col md:flex-row justify-center items-center md:gap-16 p-7 md:pt-[82px]">
+          <!-- banner-info -->
+          <div class="md:mr-10 text-center">
+            <p class="text-xl md:text-2xl font-semibold mb-4 md:mb-11">---SALE FEVER---</p>
+            <h1 class="font-bold text-2xl md:text-4xl mb-4 md:mb-11">
+              Purchase TK 200 or <br class="hidden" />
+              above & get <span class="text-[#E527B2]">20% off</span>
+            </h1>
+            <div class="flex flex-col md:flex-row gap-1 md:gap-2 justify-center items-center">
+              <p class="text-sm md:text-lg font-semibold">Use Promo Code</p>
+              <button class="btn btn-sm btn-secondary rounded-md font-semibold text-white">SELL200</button>
+            </div>
+          </div>
+          <!-- banner-pic -->
+          <div class="mt-4 md:mt-0">
+            <img class="w-full md:w-[500px] h-auto" src="/images/Summer 1.png" alt="">
+          </div>
+        </div>
+      </section>
+    </header>
+    <main></main>
+  </body> 
 </html>
