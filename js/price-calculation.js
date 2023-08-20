@@ -23,6 +23,7 @@ function cardClick(target) {
   updateTotalPrice();
 }
 
+
 function updateTotalPrice() {
   //get the all price related element and appply button
   const totalPriceElement = document.getElementById("Price");
@@ -74,7 +75,6 @@ function updateTotalPrice() {
     totalElement.innerText = totalPrice;
   }
 }
-
 // set the event listener to coupon code input
 const couponCodeInput = document.getElementById("coupon-code-input");
 couponCodeInput.addEventListener("input", () => {
@@ -83,6 +83,7 @@ couponCodeInput.addEventListener("input", () => {
 
 
 //////////////////////////
+// RESET the previous calculated part when goHome button is clicked
 const calculationEntry = document.getElementById("calculation-entry");
 const PriceE = document.getElementById("Price");
 const discountPrice = document.getElementById("discountPrice");
@@ -91,7 +92,7 @@ const couponCodeInputT = document.getElementById("coupon-code-input");
 const applyButton = document.getElementById("btn-apply");
 const makePurchaseButton = document.getElementById('makePurchaseButton');
 
-function resetCalculation() {
+function calculatedValueReset() {
   total = 0;
   PriceE.innerText = total.toFixed(2);
   discountPrice.innerText = "0.00";

@@ -79,7 +79,7 @@
           <div class="w-full md:w-auto">
             <!-- first-row -->
             <h2
-              class="text-3xl font-semibold mt-4 mb-4 text-center md:text-left"
+              class="text-3xl font-semibold mt-4 mb-4 text-center md:text-left md:ml-6"
             >
               Kitchenware
             </h2>
@@ -89,7 +89,7 @@
               <!-- card-1 -->
               <div
                 onclick="cardClick(this)"
-                class="w-[342px] h-[350px] bg-[#FFF] rounded-lg p-5 ml-12 md:ml-0"
+                class="w-[342px] h-[350px] bg-[#FFF] rounded-lg p-5 ml-12 md:ml-6"
               >
                 <div
                   class="w-[302px] h-[200px] rounded-lg bg-[#F8F8F8] pl-[85px] pt-[30px]"
@@ -143,7 +143,7 @@
               <!-- card-3 -->
               <div
                 onclick="cardClick(this)"
-                class="w-[342px] h-[350px] bg-[#FFF] rounded-lg p-5 ml-12 md:ml-0"
+                class="w-[342px] h-[350px] bg-[#FFF] rounded-lg p-5 ml-12 md:ml-6"
               >
                 <div
                   class="w-[302px] h-[200px] rounded-lg bg-[#F8F8F8] pl-[85px] pt-[30px]"
@@ -166,7 +166,7 @@
 
             <!-- second-row -->
             <h2
-              class="text-3xl font-semibold mt-4 mb-4 text-center md:text-left"
+              class="text-3xl font-semibold mt-4 mb-4 text-center md:text-left md:ml-6"
             >
               Sportswear
             </h2>
@@ -176,7 +176,7 @@
               <!-- card-1 -->
               <div
                 onclick="cardClick(this)"
-                class="w-[342px] h-[350px] bg-[#FFF] rounded-lg p-5 ml-12 md:ml-0"
+                class="w-[342px] h-[350px] bg-[#FFF] rounded-lg p-5 ml-12 md:ml-6"
               >
                 <div
                   class="w-[302px] h-[200px] rounded-lg bg-[#F8F8F8] pl-[85px] pt-[30px]"
@@ -220,7 +220,7 @@
               <!-- card-3 -->
               <div
                 onclick="cardClick(this)"
-                class="w-[342px] h-[350px] bg-[#FFF] rounded-lg p-5 ml-12 md:ml-0"
+                class="w-[342px] h-[350px] bg-[#FFF] rounded-lg p-5 ml-12 md:ml-6"
               >
                 <div
                   class="w-[302px] h-[200px] rounded-lg bg-[#F8F8F8] pl-[85px] pt-[30px]"
@@ -243,7 +243,7 @@
 
             <!-- third-row -->
             <h2
-              class="text-3xl font-semibold mt-4 mb-4 text-center md:text-left"
+              class="text-3xl font-semibold mt-4 mb-4 text-center md:text-left md:ml-6"
             >
               Furniture
             </h2>
@@ -253,7 +253,7 @@
               <!-- card-1 -->
               <div
                 onclick="cardClick(this)"
-                class="w-[342px] h-[350px] bg-[#FFF] rounded-lg p-5 ml-12 md:ml-0"
+                class="w-[342px] h-[350px] bg-[#FFF] rounded-lg p-5 ml-12 md:ml-6"
               >
                 <div
                   class="w-[302px] h-[200px] rounded-lg bg-[#F8F8F8] pl-[85px] pt-[30px]"
@@ -297,7 +297,7 @@
               <!-- card-3 -->
               <div
                 onclick="cardClick(this)"
-                class="w-[342px] h-[350px] bg-[#FFF] rounded-lg p-5 ml-12 md:ml-0"
+                class="w-[342px] h-[350px] bg-[#FFF] rounded-lg p-5 ml-12 md:ml-6"
               >
                 <div
                   class="w-[302px] h-[200px] rounded-lg bg-[#F8F8F8] pl-[85px] pt-[30px]"
@@ -321,7 +321,7 @@
           <!-- card container end -->
 
           <!-- calculation part start-->
-          <div class="w-[300px] mt-[70px] ml-12 md:ml-5 relative">
+          <div class="w-[300px] mt-[70px] ml-8 md:ml-6 relative h-[500px]">
             <!-- cuppon part -->
             <div class="w-[370px] h-[135px] bg-[#FFF] rounded-lg">
               <h1 class="font-semibold text-lg pl-5 pt-5 mb-2">Have coupon?</h1>
@@ -369,7 +369,6 @@
                 <hr class="w-[340px] mx-auto" />
               </div>
               <!-- Make purchase button -->
-              <!-- <button class="btn bg-[#E527B2] text-white h-[46px] rounded-lg px-12 absolute right-[1px] top-[327px]">Make Purchase</button> -->
               <button
                 onclick="card1.showModal()"
                 id="makePurchaseButton"
@@ -379,23 +378,29 @@
                 Make Purchase
               </button>
               <!-- modal -->
-              <dialog id="card1" class="modal modal-bottom sm:modal-middle">
+              <dialog id="card1" class="modal modal-middle md:modal-middle">
                 <form method="dialog" class="modal-box">
                   <!-- modal details -->
                   <div
-                    class="card space-y-3 flex justify-center items-center h-[400px] rounded-lg"
+                    class="card space-y-3 flex flex-col justify-center items-center h-[300px] md:h-[400px] rounded-lg"
                   >
-                    <img class="" src="./images/congo.png" alt="" />
-                    <h2 class="text-5xl font-bold text-center">
+                    <img
+                      class="w-[100px] h-[100px] md:w-[150px] md:h-[150px]"
+                      src="./images/congo.png"
+                      alt=""
+                    />
+                    <h2 class="text-3xl md:text-5xl font-bold text-center">
                       Congratulations
                     </h2>
-                    <p class="text-center text-[#11111180] pb-6">
+                    <p
+                      class="text-lg md:text-xl text-center text-[#11111180] pb-4 md:pb-6"
+                    >
                       Your Purchase the product
                     </p>
                     <button
-                    onclick="resetCalculation()"
+                      onclick="calculatedValueReset()"
                       id="goHome"
-                      class="btn bg-[#E527B2] text-white h-[46px] rounded-lg px-10 capitalize "
+                      class="btn bg-[#E527B2] text-white h-[46px] md:h-[54px] rounded-lg px-10 capitalize text-lg md:text-xl"
                     >
                       Go Home
                     </button>
