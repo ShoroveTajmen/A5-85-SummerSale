@@ -1,6 +1,6 @@
 //function for click card
 let total = 0;
-let couponApplied = false;
+// let couponApplied = false;
 function cardClick(target) {
   //get the product name
   const productName = target.childNodes[5].innerText;
