@@ -29,18 +29,26 @@ function updateTotalPrice() {
   const discountPriceElement = document.getElementById("discountPrice");
   const totalElement = document.getElementById("total");
   const applyButton = document.getElementById("btn-apply");
+  const makePurchaseButton = document.getElementById("makePurchaseButton");
 
   const totalPrice = total.toFixed(2);
 
   //set the total price
   totalPriceElement.innerText = totalPrice;
 
+  //When totalPrice is > 0 make purchase button will enabled
+  if (totalPrice > 0) {
+    makePurchaseButton.removeAttribute("disabled");
+  } else {
+    makePurchaseButton.setAttribute("disabled", "disabled");
+  }
+
   //check if totalPrice is grreater than 200 or not
   if (totalPrice > 200) {
     applyButton.removeAttribute("disabled");
+
     const couponCodeInput = document.getElementById("coupon-code-input");
     const couponCode = couponCodeInput.value;
-
     //if coupon code is correct further calculation will be execute
     if (couponCode === "SELL200") {
       const discountPercentage = 20;
@@ -72,11 +80,31 @@ const couponCodeInput = document.getElementById("coupon-code-input");
 couponCodeInput.addEventListener("input", () => {
   updateTotalPrice();
 });
-//For every reload apply button will be disbaled and coupon field will be clear
-window.addEventListener("load", () => {
-  const applyButton = document.getElementById("btn-apply");
-  applyButton.setAttribute("disabled", "disabled");
+// //For every reload apply button will be disbaled and coupon field will be clear
+// window.addEventListener("load", () => {
+//   const applyButton = document.getElementById("btn-apply");
+//   applyButton.setAttribute("disabled", "disabled");
 
-  const couponCodeInput = document.getElementById("coupon-code-input");
-  couponCodeInput.value = ""; // Clear the input field
-});
+//   const makePurchaseButton = document.getElementById('makePurchaseButton');
+//   makePurchaseButton.setAttribute("disabled", "disabled");
+
+//   const couponCodeInput = document.getElementById("coupon-code-input");
+//   couponCodeInput.value = ""; // Clear the input field
+// });
+
+//////////////////////////
+const calculationEntry = document.getElementById("calculation-entry");
+const PriceE = document.getElementById("Price");
+const discountPrice = document.getElementById("discountPrice");
+const totall = document.getElementById("total");
+const couponCodeInputT = document.getElementById("coupon-code-input");
+
+function resetCalculation() {
+  calculationEntry.innerHTML = "";
+  PriceE.innerText = "0.00";
+  discountPrice.innerText = "0.00";
+  totall.innerText = "0.00";
+  couponCodeInputT.value = "";
+  applyButton.setAttribute("disabled", "disabled");
+  totalPrice = 0;
+}

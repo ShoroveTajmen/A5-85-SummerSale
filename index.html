@@ -326,13 +326,16 @@
             <div class="w-[370px] h-[135px] bg-[#FFF] rounded-lg">
               <h1 class="font-semibold text-lg pl-5 pt-5 mb-2">Have coupon?</h1>
               <div class="relative">
-                <input id="coupon-code-input"
+                <input
+                  id="coupon-code-input"
                   class="w-[250px] h-[47px] border rounded-l px-2 ml-5"
                   type="text"
                   placeholder="Coupon code"
                 />
-                <button disabled id="btn-apply"
-                  class="btn bg-[#E527B2] text-white h-[46px] rounded-l absolute left"
+                <button
+                  disabled
+                  id="btn-apply"
+                  class="btn bg-[#E527B2] text-white h-[46px] rounded-l absolute left capitalize"
                 >
                   Apply
                 </button>
@@ -340,7 +343,7 @@
             </div>
 
             <!-- product, price part and make-purchase button-->
-            <div class="w-[370px] mt-4 rounded-lg bg-[#FFF]">
+            <div class="w-[370px] mt-4 rounded-lg bg-[#FFF] relative">
               <!-- product add here -->
               <div id="calculation-entry"></div>
               <!-- price add here -->
@@ -350,22 +353,55 @@
                 <hr class="w-[340px] mx-auto" />
                 <h1 class="ml-5 pt-4 pb-2">
                   Total Price:
-                  <span id="Price" class="text-[#11111180]">0.00</span><span class="text-[#11111180]">TK</span>
+                  <span id="Price" class="text-[#11111180]">0.00</span
+                  ><span class="text-[#11111180]">TK</span>
                 </h1>
                 <h1 class="ml-5 pb-2">
                   Discount:
-                  <span id="discountPrice" class="text-[#11111180]"
-                    >0.00</span
+                  <span id="discountPrice" class="text-[#11111180]">0.00</span
                   ><span class="text-[#11111180]">TK</span>
                 </h1>
                 <h1 class="ml-5 pb-8">
                   Total:
-                  <span id="total" class="text-[#11111180]">0.00</span><span class="text-[#11111180]">TK</span>
+                  <span id="total" class="text-[#11111180]">0.00</span
+                  ><span class="text-[#11111180]">TK</span>
                 </h1>
                 <hr class="w-[340px] mx-auto" />
               </div>
               <!-- Make purchase button -->
               <!-- <button class="btn bg-[#E527B2] text-white h-[46px] rounded-lg px-12 absolute right-[1px] top-[327px]">Make Purchase</button> -->
+              <button
+                onclick="card1.showModal()"
+                id="makePurchaseButton"
+                class="btn bg-[#E527B2] text-white h-[46px] rounded-lg px-12 absolute right-[70px] transform -translate-y-1/2 capitalize"
+                disabled
+              >
+                Make Purchase
+              </button>
+              <!-- modal -->
+              <dialog id="card1" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box">
+                  <!-- modal details -->
+                  <div
+                    class="card space-y-3 flex justify-center items-center h-[400px] rounded-lg"
+                  >
+                    <img class="" src="./images/congo.png" alt="" />
+                    <h2 class="text-5xl font-bold text-center">
+                      Congratulations
+                    </h2>
+                    <p class="text-center text-[#11111180] pb-6">
+                      Your Purchase the product
+                    </p>
+                    <button
+                    onclick="resetCalculation()"
+                      id="goHome"
+                      class="btn bg-[#E527B2] text-white h-[46px] rounded-lg px-10 capitalize "
+                    >
+                      Go Home
+                    </button>
+                  </div>
+                </form>
+              </dialog>
             </div>
           </div>
         </div>
