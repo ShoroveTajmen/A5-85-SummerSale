@@ -75,7 +75,7 @@
       <section class="bg-[#F8F8F8]">
         <!-- main-container -->
         <div class="mt-4 md:mt-8 lg:flex lg:flex-row justify-center">
-          <!-- card-container -->
+          <!-- card-container start-->
           <div class="w-full md:w-auto">
             <!-- first-row -->
             <h2
@@ -318,9 +318,10 @@
               </div>
             </div>
           </div>
+          <!-- card container end -->
 
-          <!-- calculation part -->
-          <div class="w-[300px] mt-[70px] ml-12 md:ml-5">
+          <!-- calculation part start-->
+          <div class="w-[300px] mt-[70px] ml-12 md:ml-5 relative">
             <!-- cuppon part -->
             <div class="w-[370px] h-[135px] bg-[#FFF] rounded-lg">
               <h1 class="font-semibold text-lg pl-5 pt-5 mb-2">Have coupon?</h1>
@@ -338,11 +339,33 @@
               </div>
             </div>
 
-            <!-- product add here -->
-            <div id="calculation-entry" class="w-[370px] mt-4 rounded-lg bg-[#FFF]"></div>
-            <!-- price add here -->
-            <div>
-                <h1>price</h1>
+            <!-- product, price part and make-purchase button-->
+            <div class="w-[370px] mt-4 rounded-lg bg-[#FFF]">
+              <!-- product add here -->
+              <div id="calculation-entry"></div>
+              <!-- price add here -->
+              <div
+                class="h-[200px] text-lg font-semibold w-[370px] mt-4 rounded-lg"
+              >
+                <hr class="w-[340px] mx-auto" />
+                <h1 class="ml-5 pt-4 pb-2">
+                  Total Price:
+                  <span id="Price" class="text-[#11111180]">0.00</span><span class="text-[#11111180]">TK</span>
+                </h1>
+                <h1 class="ml-5 pb-2">
+                  Discount:
+                  <span id="discountPrice" class="text-[#11111180]"
+                    >0.00</span
+                  ><span class="text-[#11111180]">TK</span>
+                </h1>
+                <h1 class="ml-5 pb-8">
+                  Total:
+                  <span id="total" class="text-[#11111180]">0.00</span><span class="text-[#11111180]">TK</span>
+                </h1>
+                <hr class="w-[340px] mx-auto" />
+              </div>
+              <!-- Make purchase button -->
+              <!-- <button class="btn bg-[#E527B2] text-white h-[46px] rounded-lg px-12 absolute right-[1px] top-[327px]">Make Purchase</button> -->
             </div>
           </div>
         </div>
