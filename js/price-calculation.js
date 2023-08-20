@@ -80,17 +80,7 @@ const couponCodeInput = document.getElementById("coupon-code-input");
 couponCodeInput.addEventListener("input", () => {
   updateTotalPrice();
 });
-// //For every reload apply button will be disbaled and coupon field will be clear
-// window.addEventListener("load", () => {
-//   const applyButton = document.getElementById("btn-apply");
-//   applyButton.setAttribute("disabled", "disabled");
 
-//   const makePurchaseButton = document.getElementById('makePurchaseButton');
-//   makePurchaseButton.setAttribute("disabled", "disabled");
-
-//   const couponCodeInput = document.getElementById("coupon-code-input");
-//   couponCodeInput.value = ""; // Clear the input field
-// });
 
 //////////////////////////
 const calculationEntry = document.getElementById("calculation-entry");
@@ -98,13 +88,16 @@ const PriceE = document.getElementById("Price");
 const discountPrice = document.getElementById("discountPrice");
 const totall = document.getElementById("total");
 const couponCodeInputT = document.getElementById("coupon-code-input");
+const applyButton = document.getElementById("btn-apply");
+const makePurchaseButton = document.getElementById('makePurchaseButton');
 
 function resetCalculation() {
-  calculationEntry.innerHTML = "";
-  PriceE.innerText = "0.00";
+  total = 0;
+  PriceE.innerText = total.toFixed(2);
   discountPrice.innerText = "0.00";
   totall.innerText = "0.00";
   couponCodeInputT.value = "";
-  applyButton.setAttribute("disabled", "disabled");
-  totalPrice = 0;
+  calculationEntry.innerHTML = "";
+  applyButton.setAttribute("disabled", "disabled"); 
+  makePurchaseButton.setAttribute("disabled", "disabled");
 }
