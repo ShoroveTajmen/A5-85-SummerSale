@@ -38,13 +38,13 @@ function updateTotalPrice() {
       const discountPercentage = 20;
       const discountAmount = (discountPercentage / 100) * totalPrice;
       const discountAmountRounded = discountAmount.toFixed(2);
-      applyButton.addEventListener("click", function () {
-        discountPriceElement.innerText = discountAmountRounded;
-      });
-
       const discountedPrice = totalPrice - discountAmount;
       const discountedPriceRounded = discountedPrice.toFixed(2);
-      totalElement.innerText = discountedPriceRounded;
+      applyButton.addEventListener("click", function () {
+        discountPriceElement.innerText = discountAmountRounded;
+        totalElement.innerText = discountedPriceRounded;
+      });
+
     } else {
       discountPriceElement.innerText = "0.00";
       totalElement.innerText = totalPrice;
